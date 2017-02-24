@@ -24,7 +24,7 @@ String.prototype.trim = function() {
 /** A partir de la chaine, on enlève les espaces en début et fin. 
  * Si la valeur est une chaine vide, on retourne null
  */
-String.prototype.null = function(){
+String.prototype["null"] = function(){
         var value = this.trim();
         if (value == "") {
                 return null;
@@ -36,7 +36,7 @@ String.prototype.null = function(){
 /** A partir de la chaine, on vérifie que la chaine est nulle ou vide
  */
 String.prototype.isNullOrEmpty = function(){
-        return this.null() == null;
+        return this["null"]() == null;
 };
 
 /** Met en majuscule la première lettre de chaque mot de la chaîne
@@ -184,12 +184,12 @@ String.prototype.sanitize = function(){
 /** Récupère la valeur numérique d'une propriété CSS calculée. 
  * Utile pour récupérer un nombre de pixels
  */
-$.fn.numericCss = function(cssProperty) {
+jQuery.fn.numericCss = function(cssProperty) {
         return parseInt(this.css(cssProperty));
 };
 
 /** Encode a set of form elements as an object. */
-$.fn.serializeObject = function()
+jQuery.fn.serializeObject = function()
 {
     var o = {};
     var a = this.serializeArray();
@@ -214,9 +214,9 @@ $.fn.serializeObject = function()
  * Cette fonction est différente de la fonction clone du fmk jQuery
  * qui permet de cloner des elements du DOM uniquement.
  */
-clone = function (object) {
+var clone = function (object) {
         if (typeof object == "object") {
-                if (object == null) { return null; }
+                if (object == null) { return null; }
                 var newElement = jQuery.extend({}, object);
                 for(var subElementIndex in newElement) {
                         if (typeof newElement[subElementIndex] == "object") {

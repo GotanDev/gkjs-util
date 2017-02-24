@@ -5,6 +5,7 @@
     "functions.min.js"
   ],
   "dependencies": {  
+    "jQuery": "~1.9"
   },
   "devDependencies": {},
   "moduleType": [
