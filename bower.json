@@ -1,0 +1,29 @@
+{
+  "name": "gkjs-util",
+  "description": "Usefull JS functions",
+  "main": [
+    "functions.min.js"
+  ],
+  "dependencies": {  
+  },
+  "devDependencies": {},
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "util",
+    "library"
+  ],
+  "authors": [
+    "Damien Cuvillier <damien@gotan.io>"
+  ],
+  "license": "Apache2",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "private": false
+}
