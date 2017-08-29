@@ -2,6 +2,7 @@
  * 
  * PROJECT GOTAN KIT JAVASCRIPT
  * @author Damien Cuvillier
+ * @version 1.1
  * @copyright All right Reserved to Gotan
  */
 
